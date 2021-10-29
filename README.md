@@ -45,6 +45,16 @@ Run the example server:
 node index.js
 ```
 
+## Make sure the server is publicly accessible
+
+NOTE: Webhooks work by the MVision Servers calling out to the web server YOU set up. So this server MUST be publicly accessible on the configured port. Moreover, the server must be https (http will not work from the MVision API service point of view).
+
+This project DOES include a sample of a basic http server, but you would need to front-end this with nginx, haproxy or some other loadbalancer that can provide the https target for the Webhook.
+
+Make sure you have routing set up for incoming connections to forward to your example server on port 3000 (default), or whichever port you set in index.js.
+
+You can easily test connectivity by turning off wifi on your mobile device and trying to get to https://<external ip>:3000/ . If it's correctly configured you will get the certificate validation issue and if you accept it, will get the welcome message.
+
 # Set up the webhook in the MVision Developer Portal
 
 Go to https://developer.mvision.mcafee.com, find the <b>Self-Service -> API Hub Management</b> section
