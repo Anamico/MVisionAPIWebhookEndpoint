@@ -51,7 +51,7 @@ Go to https://developer.mvision.mcafee.com, find the <b>Self-Service -> API Hub 
 
 Select the MVision ePO Category and select all event types
 
-![Select Event Types](images/selectEVentTypes.png)
+![Select Event Types](images/selectEventTypes.png)
 
 Upload the public key you generated when starting the example webhook endpoint server above (it's the id_rsa.pub file you created with ssh-keygen)
 
